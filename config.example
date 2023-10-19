@@ -1,0 +1,28 @@
+# this is an example file, fill it in and save it as config.local
+
+
+# each target account is given a [section]. you can name the section whatever you want, it doesn't have to be the account name or anything fancy.
+# the section name is used for filenames that store information about the state of the target etc.
+
+[mytarget1]
+# the base URL of the instance where your bot account resides (n.b. not where the target account resides, though they may be the same)
+api_base_url = https://mas.to/
+
+# the filename of the file that contains the application access token that you have set up under the bot account for ThreadHeadFred.
+# this defaults to <sectionname>.token.secret, e.g. mytarget1.token.secret in this example, but you can override it here if you need to.
+#access_token = alternativename.token.secret
+
+# the account that the bot is going to boost. include the instance's domain even if it's on the same instance as your bot account.
+target_account = username@instancename.tld
+
+# The maximum number of toots to try to fetch from the target user's feed at once. If the target is a rapid-fire poster, and we are only called infrequently,
+# this will need to be increased in order to keep up. Your instance may cap this limit!
+# optional, defaults to 4 if not specified
+toot_fetch_limit = 10
+
+
+# the script supports multiple boost targets...
+
+[mytarget2]
+api_base_url = https://another.instance/
+target_account = differenttarget@anotherinstancename.tld
