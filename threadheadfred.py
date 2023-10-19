@@ -82,7 +82,7 @@ for configsection in config.sections():
     print(f"\tFound account, username {sourceacctdict.acct}, id is {sourceacctdict.id}");
 
     # get <toot_fetch_limit> toots for this account, starting at the loaded last seen status ID (if we are being run for the first time this will return the most recent <toot_fetch_limit> toots, that match the exclusions set.
-    print(f"\tRequesting up to {toot_fetch_limit} toots starting with id \"{lastseenstatusid}\"");
+    print(f"\tRequesting up to {toot_fetch_limit} toots starting after id \"{lastseenstatusid}\"");
     status_dicts_list = mastodon.account_statuses(id = sourceacctdict.id, exclude_replies = True, exclude_reblogs = True, min_id = lastseenstatusid, limit = toot_fetch_limit)
 
     # make sure that worked...
