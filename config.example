@@ -10,6 +10,7 @@ api_base_url = https://mas.to/
 
 # the filename of the file that contains the application access token that you have set up under the bot account for ThreadHeadFred.
 # this defaults to <sectionname>.token.secret, e.g. mytarget1.token.secret in this example, but you can override it here if you need to.
+# whatever it's called, don't forget to create this file and put your access token in it!
 #access_token = alternativename.token.secret
 
 # the account that the bot is going to boost. include the instance's domain even if it's on the same instance as your bot account.
@@ -21,8 +22,8 @@ target_account = username@instancename.tld
 toot_fetch_limit = 10
 
 
-# the script supports multiple boost targets...
+# the script supports multiple bot account / boost target pairs...
 
 [mytarget2]
-api_base_url = https://another.instance/
-target_account = differenttarget@anotherinstancename.tld
+api_base_url = https://another.botaccount.instance/
+target_account = differentboosttarget@anotherinstancename.tld
